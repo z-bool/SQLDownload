@@ -263,7 +263,7 @@ public class SQLDownload {
     public static void getDatabaseMetadata(Connection connection) throws SQLException {
         System.out.println("Current database name: " + connection.getCatalog());
         DatabaseMetaData metaData = connection.getMetaData();
-        ResultSet tables = metaData.getTables(null, null, null, new String[] {"TABLE"});
+        ResultSet tables = metaData.getTables(connection.getCatalog(), null, null, new String[] {"TABLE"});
 
         while (tables.next()) {
             String tableName = tables.getString("TABLE_NAME");
