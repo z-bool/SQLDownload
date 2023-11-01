@@ -238,7 +238,11 @@ public class SQLDownload {
             DBURL = properties.getProperty("db_url");
             DBUSER = properties.getProperty("db_user");
             DBPASSWORD = properties.getProperty("db_passwd");
-            DBFunction = Integer.parseInt(properties.getProperty("db_function"));
+            String db_function = properties.getProperty("db_function");
+            if (!db_function.equals("")){
+                DBFunction = Integer.parseInt(db_function);
+            }
+
 
         } catch (IOException e) {
             System.out.println("IO Error:" + e.getMessage());

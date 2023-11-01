@@ -53,5 +53,20 @@ db_function=1
 
 <small>无配置文件情况下</small>
 
+![image-20231101103319629](https://cdn.jsdelivr.net/gh/z-bool/images@master/img/image-20231101103319629.png)
 
+**混合模式:**
+
+<small>文本配置下，部分不填，通过交互来解决。</small>
+
+```txt
+# jdbc mysql url
+db_url=jdbc:mysql://localhost:3306/a
+# jdbc mysql username
+db_user=root
+# jdbc mysql password
+db_passwd=123456
+# function mode
+db_function=
+```
 
